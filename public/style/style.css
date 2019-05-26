@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    user-select: none;
+}
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 5vmin;
+}
+
+img {
+    width: 20%;
+    position: absolute;
+    animation: drive 4500ms linear infinite;
+}
+
+#plane {
+    width: 20vw;
+    position: absolute;
+    top: 45vh;
+    left: 40vw;
+    animation: fly 1500ms linear infinite;
+    transform: rotateY(180deg);
+}
+
+#wombat {
+    width: 10vw;
+    position: absolute;
+    left: 40vw;
+    top: 0;
+    animation: wombat 2s linear infinite;
+    transform: rotateY(180deg);
+}
+
+@keyframes drive {
+    from {left: 105vw}
+    to {left: -20vw}
+}
+
+@keyframes fly {
+    0% {left: 0; transform: rotate3d(0, 0, 0, 0deg)}
+    50% {transform: rotate3d(180, 180, 180, 360deg)}
+    100% {left: 105vw;}
+}
+
+@keyframes wombat {
+    0% {top: 0; transform: rotate3d(0, 0, 0, 0deg)}
+    60% {transform: rotate3d(180, 180, 180, 720deg)}
+    100% {top: 100vh;}
+}
